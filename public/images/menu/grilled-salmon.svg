@@ -1,0 +1,5 @@
+<svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="hsl(329, 70%, 80%)"/>
+  <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="hsl(329, 70%, 30%)" font-weight="bold">Grilled Salmon</text>
+  <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="hsl(329, 70%, 30%)" opacity="0.7">(Placeholder SVG)</text>
+</svg>
