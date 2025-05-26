@@ -38,10 +38,8 @@ export default function HomePage() {
 	const featuredDishes = mockDishes.slice(0, 3); // Show 3 featured dishes
 
 	return (
-		<div className="bg-gray-50 text-gray-800">
-			{' '}
-			{/* Default background for light sections */}
-			<Hero /> {/* Assumes Hero.tsx uses its own dark bg and light text */}
+		<div className="text-gray-800">
+			<Hero />
 			{/* Chef's Specials Section */}
 			<motion.section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8" variants={sectionVariants(0.2)} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
 				<div className="container mx-auto text-center">
@@ -50,9 +48,6 @@ export default function HomePage() {
 					<motion.div
 						className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
 						variants={listVariants()}
-						// initial="hidden" // Handled by parent section
-						// whileInView="visible"
-						// viewport={{ once: true, amount: 0.1 }}
 					>
 						{featuredDishes.map((dish) => (
 							<motion.div key={dish.id} variants={itemVariants}>
@@ -69,7 +64,7 @@ export default function HomePage() {
 			</motion.section>
 			{/* Our Philosophy Section */}
 			<motion.section
-				className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8" // Light background for contrast
+				className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white/80 backdrop-blur-sm"
 				variants={sectionVariants()}
 				initial="hidden"
 				whileInView="visible"
@@ -90,7 +85,7 @@ export default function HomePage() {
 			</motion.section>
 			{/* Testimonials Section */}
 			<motion.section
-				className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50" // Consistent with default bg
+				className="py-16 md:py-24 px-4 sm:px-6 lg:px-8"
 				variants={sectionVariants()}
 				initial="hidden"
 				whileInView="visible"
@@ -102,9 +97,6 @@ export default function HomePage() {
 					<motion.div
 						className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 						variants={listVariants(0.2, 0.3)}
-						// initial="hidden" // Handled by parent
-						// whileInView="visible"
-						// viewport={{ once: true, amount: 0.1 }}
 					>
 						{mockTestimonials.map((testimonial) => (
 							<motion.div key={testimonial.id} variants={itemVariants} className="flex">
@@ -118,7 +110,7 @@ export default function HomePage() {
 			</motion.section>
 			{/* Call to Action Section */}
 			<motion.section
-				className="bg-brand-dark text-brand-ivory py-20 md:py-28 px-4 sm:px-6 lg:px-8" // Dark background, ivory text
+				className="bg-brand-dark text-brand-ivory py-20 md:py-28 px-4 sm:px-6 lg:px-8"
 				variants={sectionVariants()}
 				initial="hidden"
 				whileInView="visible"

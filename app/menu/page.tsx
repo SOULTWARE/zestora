@@ -47,7 +47,7 @@ export default function MenuPage() {
 	};
 
 	return (
-		<div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+		<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
 			<div className="container mx-auto">
 				<motion.h1 variants={pageTitleVariants} initial="hidden" animate="visible" className="mb-10 text-center text-4xl font-bold text-gray-800 md:text-5xl">
 					Our Menu
@@ -59,7 +59,7 @@ export default function MenuPage() {
 
 				<motion.div
 					className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-					variants={gridContainerParentVariants} // Apply parent staggering here
+					variants={gridContainerParentVariants}
 					initial="hidden"
 					animate="visible"
 				>

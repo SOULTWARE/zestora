@@ -7,7 +7,7 @@ interface ChefCardProps {
 
 const ChefCard: React.FC<ChefCardProps> = ({ chef }) => {
   return (
-    <div className="flex flex-col items-center rounded-lg bg-white p-6 text-center shadow-lg transition-shadow duration-300 hover:shadow-xl">
+    <div className="flex flex-col items-center rounded-lg bg-white/90 backdrop-blur-sm p-6 text-center shadow-lg transition-shadow duration-300 hover:shadow-xl">
       <div className="relative mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-orange-500 md:h-40 md:w-40">
         {/* Placeholder for actual SVG avatar */}
         <Image

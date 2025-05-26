@@ -19,12 +19,12 @@ const formContainerVariants = {
 
 export default function ReservationPage() {
 	return (
-		<div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+		<div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
 			<div className="container mx-auto max-w-2xl">
 				<motion.h1
 					variants={pageTitleVariants}
 					initial="hidden"
-					animate="visible" // Animate on initial load
+					animate="visible"
 					className="mb-10 text-center text-4xl font-bold text-gray-800 md:text-5xl"
 				>
 					Book Your Table
@@ -32,9 +32,9 @@ export default function ReservationPage() {
 				<motion.div
 					variants={formContainerVariants}
 					initial="hidden"
-					animate="visible" // Animate on initial load
+					animate="visible"
 				>
-					<ReservationForm /> {/* ReservationForm has its own internal entry animation */}
+					<ReservationForm />
 				</motion.div>
 			</div>
 		</div>

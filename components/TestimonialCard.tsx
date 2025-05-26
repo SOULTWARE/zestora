@@ -16,7 +16,7 @@ const cardVariants = {
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
 	return (
 		<motion.div
-			className="bg-white p-6 rounded-lg shadow-lg flex flex-col h-full border border-gray-200"
+			className="bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-lg flex flex-col h-full border border-gray-200"
 			variants={cardVariants}
 			// initial, animate, exit will be handled by parent staggering or whileInView
 		>

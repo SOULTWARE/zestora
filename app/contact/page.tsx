@@ -72,12 +72,12 @@ const mapVariants = {
 
 export default function ContactPage() {
 	return (
-		<div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+		<div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
 			<div className="container mx-auto">
 				<motion.h1
 					variants={pageTitleVariants}
 					initial="hidden"
-					animate="visible" // Animate on initial load
+					animate="visible"
 					className="mb-12 text-center text-4xl font-bold text-gray-800 md:text-5xl"
 				>
 					Get In Touch
@@ -89,9 +89,9 @@ export default function ContactPage() {
 						variants={columnVariants}
 						initial="hidden"
 						whileInView="visible"
-						viewport={{ once: true, amount: 0.1 }} // Trigger when 10% of the column is visible
+						viewport={{ once: true, amount: 0.1 }}
 					>
-						<div className="rounded-lg bg-white p-6 shadow-xl md:p-8">
+						<div className="rounded-lg bg-white/90 backdrop-blur-sm p-6 shadow-xl md:p-8">
 							<motion.h2 className="mb-6 text-2xl font-semibold text-gray-700" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
 								Contact Information
 							</motion.h2>
@@ -132,10 +132,10 @@ export default function ContactPage() {
 						variants={columnVariants}
 						initial="hidden"
 						whileInView="visible"
-						viewport={{ once: true, amount: 0.1 }} // Trigger when 10% of the column is visible
-						transition={{ delay: 0.1 }} // Slight delay for the second column if desired
+						viewport={{ once: true, amount: 0.1 }}
+						transition={{ delay: 0.1 }}
 					>
-						<div className="rounded-lg bg-white p-6 shadow-xl md:p-8">
+						<div className="rounded-lg bg-white/90 backdrop-blur-sm p-6 shadow-xl md:p-8">
 							<motion.h2 className="mb-6 text-2xl font-semibold text-gray-700" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
 								Send Us a Message
 							</motion.h2>

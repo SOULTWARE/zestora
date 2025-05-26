@@ -7,7 +7,7 @@ interface DishCardProps {
 
 const DishCard: React.FC<DishCardProps> = ({ dish }) => {
 	return (
-		<div className="overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
+		<div className="overflow-hidden rounded-lg bg-white/90 backdrop-blur-sm shadow-lg transition-shadow duration-300 hover:shadow-xl">
 			<div className="relative h-56 w-full">
 				<Image src={dish.image} alt={dish.name} layout="fill" objectFit="cover" className="transition-transform duration-300 group-hover:scale-105" />
 			</div>

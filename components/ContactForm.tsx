@@ -44,27 +44,20 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="p-6 text-center bg-green-50 border border-green-200 rounded-lg shadow-md"
-      >
-        <h3 className="text-xl font-semibold text-green-700 mb-2">Message Sent!</h3>
-        <p className="text-green-600 mb-4">Thank you for contacting us. We'll get back to you shortly.</p>
-        <button
-          onClick={() => setIsSubmitted(false)}
-          className="px-5 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition duration-200 text-sm"
-        >
-          Send Another Message
-        </button>
-      </motion.div>
-    );
+			<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="p-6 text-center bg-green-50/90 backdrop-blur-sm border border-green-200 rounded-lg shadow-md">
+				<h3 className="text-xl font-semibold text-green-700 mb-2">Message Sent!</h3>
+				<p className="text-green-600 mb-4">Thank you for contacting us. We'll get back to you shortly.</p>
+				<button onClick={() => setIsSubmitted(false)} className="px-5 py-2 bg-orange-500 text-white  is the website SEO optimized? I am using use clients on the components but all the pages are server rendredrounded-lg hover:bg-orange-600 transition duration-200 text-sm">
+					Send Another Message
+				</button>
+			</motion.div>
+		);
   }
 
   return (
     <motion.form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-5"
+      className="space-y-5 bg-white/90 backdrop-blur-sm p-6 rounded-lg shadow-md"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.2, duration: 0.5 }}

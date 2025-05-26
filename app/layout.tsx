@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BackgroundBlobs from "@/components/BackgroundBlobs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50`}>
+      <body className={`${inter.className} relative min-h-screen`}>
+        <BackgroundBlobs />
         <Navbar />
-        <main className="pt-24 flex-grow">
+        <main className="pt-24 flex-grow relative">
           {children}
         </main>
         <Footer />
