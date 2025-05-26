@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zestora Restaurant Website
 
-## Getting Started
+A modern, elegant restaurant website built with Next.js 15, showcasing SOULTWARE's expertise in creating beautiful and performant web applications.
 
-First, run the development server:
+<img src="public/images/Zestora.png" alt="Zestora" />
 
+
+## 🌟 Features
+
+- **Modern Design**: Sleek, responsive interface with beautiful animations and transitions
+- **Performance Optimized**: Built with Next.js 15 for optimal performance and SEO
+- **Interactive UI**: Smooth animations powered by Framer Motion
+- **Responsive Layout**: Perfect viewing experience across all devices
+- **Dark Theme**: Elegant dark mode design for enhanced visual appeal
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Language**: TypeScript
+- **Form Handling**: React Hook Form with Zod validation
+- **Package Manager**: pnpm
+
+## 📱 Key Pages
+
+- **Home**: Engaging landing page with hero section and key features
+- **Menu**: Interactive menu with category filtering
+- **About**: Team showcase with elegant chef cards
+- **Contact**: Contact form with validation
+- **Reservation**: Table booking system
+
+## 🚀 Getting Started
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/soultware/zestora.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## 💻 Development
 
-To learn more about Next.js, take a look at the following resources:
+- **Development Mode**: `pnpm dev`
+- **Build**: `pnpm build`
+- **Start Production Server**: `pnpm start`
+- **Type Checking**: `pnpm type-check`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+zestora/
+├── app/                # Next.js app directory
+│   ├── about/         # About page
+│   ├── contact/       # Contact page
+│   ├── menu/          # Menu page
+│   └── reservation/   # Reservation page
+├── components/        # Reusable components
+├── lib/              # Utilities and data
+├── public/           # Static assets
+└── types/            # TypeScript types
+```
 
-## Deploy on Vercel
+## ✨ About SOULTWARE
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is a demonstration of SOULTWARE's capabilities in creating modern, performant web applications. We specialize in:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Modern Web Development
+- User Experience Design
+- Performance Optimization
+- Responsive Design
+- Custom Solutions
+
+Visit [SOULTWARE](https://soultware.com) to learn more about our services.
+
+## 📄 License
+
+This project is a demo created by SOULTWARE. All rights reserved.
+
+---
+
+Created with ❤️ by [SOULTWARE](https://soultware.com)
