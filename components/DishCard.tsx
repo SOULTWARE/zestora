@@ -7,17 +7,28 @@ interface DishCardProps {
 
 const DishCard: React.FC<DishCardProps> = ({ dish }) => {
 	return (
-		<div className="overflow-hidden rounded-lg bg-white shadow-lg transition-shadow duration-300 hover:shadow-xl">
-			<div className="relative h-56 w-full">
-				<Image src={dish.image} alt={dish.name} layout="fill" objectFit="cover" className="transition-transform duration-300 group-hover:scale-105" />
+		<div className="group overflow-hidden rounded-lg bg-[#181818] border border-[#2a2a2a] shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10 hover:border-[#FF7E5F]/20">
+			<div className="relative h-56 w-full overflow-hidden">
+				<Image
+					src={dish.image}
+					alt={dish.name}
+					fill
+					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					className="object-cover transition-transform duration-500 group-hover:scale-110"
+				/>
+				<div className="absolute inset-0 bg-gradient-to-t from-[#181818] to-transparent opacity-50" />
 			</div>
 			<div className="p-6">
-				<h3 className="mb-2 text-2xl font-semibold text-gray-800">{dish.name}</h3>
-				<p className="mb-3 text-sm text-gray-600">{dish.description}</p>
 				<div className="mb-4">
-					<span className="inline-block rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-700">{dish.category}</span>
+					<span className="inline-block rounded-full bg-[#FF7E5F]/10 px-3 py-1 text-sm font-semibold text-[#FF7E5F]">
+						{dish.category}
+					</span>
 				</div>
-				<p className="text-xl font-bold text-gray-900">${dish.price.toFixed(2)}</p>
+				<h3 className="mb-2 text-2xl font-semibold text-[#FFF8F0] group-hover:text-[#FF7E5F] transition-colors">
+					{dish.name}
+				</h3>
+				<p className="mb-3 text-sm text-[#FDF6EC]/80">{dish.description}</p>
+				<p className="text-xl font-bold text-[#FF7E5F]">${dish.price.toFixed(2)}</p>
 			</div>
 		</div>
 	);
