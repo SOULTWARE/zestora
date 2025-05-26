@@ -2,6 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  :root {
+    --background: 26 26 26; /* #1a1a1a */
+    --background-darker: 15 15 15; /* #0f0f0f */
+    --card: 24 24 24; /* #181818 */
+    --text: 253 246 236; /* #FDF6EC */
+    --text-bright: 255 248 240; /* #FFF8F0 */
+    --accent: 255 126 95; /* #FF7E5F */
+  }
+
+  body {
+    @apply bg-[#1a1a1a] text-[#FDF6EC] font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-[#FFF8F0] font-semibold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-[#FF7E5F] text-white rounded-lg font-medium
+           hover:bg-opacity-90 transition-all duration-300
+           hover:scale-[1.02] hover:shadow-lg shadow-orange-500/20;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-[#FF7E5F] text-[#FF7E5F] rounded-lg font-medium
+           hover:bg-[#FF7E5F] hover:text-white transition-all duration-300;
+  }
+
+  .input-dark {
+    @apply bg-[#242424] border-[#333333] text-[#FDF6EC] rounded-lg
+           focus:ring-[#FF7E5F] focus:border-[#FF7E5F] placeholder-gray-500;
+  }
+
+  .card-dark {
+    @apply bg-[#181818] rounded-lg shadow-lg border border-[#2a2a2a]
+           hover:shadow-xl transition-all duration-300;
+  }
+
+  .section-dark {
+    @apply bg-[#0f0f0f] rounded-lg shadow-md border border-[#2a2a2a];
+  }
 }

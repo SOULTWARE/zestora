@@ -1,30 +1,33 @@
-import { DishCategory, dishCategories } from "@/lib/dish-data";
+import { DishCategory } from '@/lib/dish-data';
+import { motion } from 'framer-motion';
 
 interface MenuFilterProps {
-  selectedCategory: DishCategory | "all";
-  onSelectCategory: (category: DishCategory | "all") => void;
+	selectedCategory: DishCategory | 'all';
+	onSelectCategory: (category: DishCategory | 'all') => void;
 }
 
-const MenuFilter: React.FC<MenuFilterProps> = ({ selectedCategory, onSelectCategory }) => {
-  const categories: (DishCategory | "all")[] = ["all", ...dishCategories];
+const categories: (DishCategory | 'all')[] = ['all', 'Starter', 'Main', 'Dessert', 'Drink'];
 
-  return (
-    <div className="mb-8 flex flex-wrap justify-center gap-2 md:gap-4">
-      {categories.map((category) => (
-        <button
-          key={category}
-          onClick={() => onSelectCategory(category)}
-          className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200 ease-in-out
-            md:px-6 md:py-3 md:text-base
-            ${selectedCategory === category
-              ? "bg-orange-500 text-white shadow-md"
-              : "bg-gray-200 text-gray-700 hover:bg-gray-300"}`}
-        >
-          {category === "all" ? "All Dishes" : category}
-        </button>
-      ))}
-    </div>
-  );
+const MenuFilter: React.FC<MenuFilterProps> = ({ selectedCategory, onSelectCategory }) => {
+	return (
+		<div className="flex flex-wrap items-center justify-center gap-3">
+			{categories.map((category) => (
+				<motion.button
+					key={category}
+					onClick={() => onSelectCategory(category)}
+					className={`px-6 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+						selectedCategory === category
+							? 'bg-[#FF7E5F] text-white shadow-lg shadow-orange-500/20'
+							: 'bg-[#242424] text-[#FDF6EC]/80 hover:text-[#FFF8F0] hover:bg-[#2a2a2a] border border-[#2a2a2a]'
+					}`}
+					whileHover={{ scale: 1.05 }}
+					whileTap={{ scale: 0.95 }}
+				>
+					{category.charAt(0).toUpperCase() + category.slice(1)}
+				</motion.button>
+			))}
+		</div>
+	);
 };
 
 export default MenuFilter;

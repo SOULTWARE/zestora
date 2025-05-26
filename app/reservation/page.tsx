@@ -8,31 +8,44 @@ const pageTitleVariants = {
 	visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
 };
 
-const formContainerVariants = {
-	hidden: { opacity: 0, y: 50 },
+const contentVariants = {
+	hidden: { opacity: 0, y: 20 },
 	visible: {
 		opacity: 1,
 		y: 0,
-		transition: { duration: 0.6, ease: 'easeOut', delay: 0.2 }, // Delay after title
+		transition: { duration: 0.5, delay: 0.2, ease: 'easeOut' },
 	},
 };
 
 export default function ReservationPage() {
 	return (
 		<div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-			<div className="container mx-auto max-w-2xl">
+			<div className="container mx-auto max-w-4xl">
 				<motion.h1
 					variants={pageTitleVariants}
 					initial="hidden"
 					animate="visible"
-					className="mb-10 text-center text-4xl font-bold text-gray-800 md:text-5xl"
+					className="mb-8 text-center text-4xl font-bold text-[#FFF8F0] md:text-5xl"
 				>
-					Book Your Table
+					Book a Table
 				</motion.h1>
+
 				<motion.div
-					variants={formContainerVariants}
+					variants={contentVariants}
 					initial="hidden"
 					animate="visible"
+					className="mb-12 text-center"
+				>
+					<p className="text-lg text-[#FDF6EC]/90">
+						Reserve your table at Zestora and prepare for an unforgettable dining experience. For parties larger than 8, please contact us directly.
+					</p>
+				</motion.div>
+
+				<motion.div
+					variants={contentVariants}
+					initial="hidden"
+					animate="visible"
+					transition={{ delay: 0.3 }}
 				>
 					<ReservationForm />
 				</motion.div>

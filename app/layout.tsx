@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} relative min-h-screen`}>
+    <html lang="en" className="dark">
+      <body className={`${inter.className} relative min-h-screen bg-[#1a1a1a] text-[#FDF6EC]`}>
         <BackgroundBlobs />
         <Navbar />
         <main className="pt-24 flex-grow relative">
