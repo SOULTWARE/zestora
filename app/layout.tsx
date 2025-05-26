@@ -12,6 +12,41 @@ export const metadata: Metadata = {
   description: 'Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients.',
   authors: [{ name: 'Soultware' }],
   metadataBase: new URL('https://soultware.com'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://soultware.com',
+    siteName: 'Zestora Restaurant',
+    title: 'Zestora | Where Flavor Meets Finesse',
+    description: 'Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients.',
+    images: [
+      {
+        url: '/images/Zestora.png',
+        width: 1200,
+        height: 630,
+        alt: 'Zestora Restaurant',
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zestora | Where Flavor Meets Finesse',
+    description: 'Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients.',
+    site: '@soultware',
+    creator: '@soultware',
+    images: ['/images/Zestora.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({

@@ -8,13 +8,15 @@ interface DishCardProps {
 const DishCard: React.FC<DishCardProps> = ({ dish }) => {
 	return (
 		<div className="group overflow-hidden rounded-lg bg-[#181818] border border-[#2a2a2a] shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10 hover:border-[#FF7E5F]/20">
-			<div className="relative h-56 w-full overflow-hidden">
+			<div className="relative w-full aspect-[16/9] overflow-hidden">
 				<Image
 					src={dish.image}
 					alt={dish.name}
 					fill
-					sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+					quality={75}
+					sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
 					className="object-cover transition-transform duration-500 group-hover:scale-110"
+					loading="lazy"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-t from-[#181818] to-transparent opacity-50" />
 			</div>
