@@ -16,7 +16,7 @@
 			description: 'Grilled bread rubbed with garlic and topped with ripe tomatoes, basil, and olive oil.',
 			price: 8.5,
 			category: 'Starter',
-			image: '/images/menu/bruschetta-classica.png',
+			image: '/images/menu/bruschetta-classica.webp',
 		},
 		{
 			id: '2',
@@ -24,7 +24,7 @@
 			description: 'Fresh mozzarella, ripe tomatoes, and basil, drizzled with balsamic glaze.',
 			price: 10.0,
 			category: 'Starter',
-			image: '/images/menu/caprese-salad.png',
+			image: '/images/menu/caprese-salad.webp',
 		},
 		{
 			id: '3',
@@ -32,7 +32,7 @@
 			description: 'Classic Roman pasta with pancetta, egg, Pecorino Romano, and black pepper.',
 			price: 16.0,
 			category: 'Main',
-			image: '/images/menu/spaghetti-carbonara.png',
+			image: '/images/menu/spaghetti-carbonara.webp',
 		},
 		{
 			id: '4',
@@ -40,7 +40,7 @@
 			description: 'Traditional Neapolitan pizza with San Marzano tomatoes, mozzarella, fresh basil, and olive oil.',
 			price: 14.5,
 			category: 'Main',
-			image: '/images/menu/margherita-pizza.png',
+			image: '/images/menu/margherita-pizza.webp',
 		},
 		{
 			id: '5',
@@ -48,7 +48,7 @@
 			description: 'Salmon fillet grilled to perfection, served with roasted vegetables.',
 			price: 22.0,
 			category: 'Main',
-			image: '/images/menu/grilled-salmon.png',
+			image: '/images/menu/grilled-salmon.webp',
 		},
 		{
 			id: '6',
@@ -56,7 +56,7 @@
 			description: 'Classic Italian dessert made with ladyfingers, mascarpone, espresso, and cocoa.',
 			price: 9.0,
 			category: 'Dessert',
-			image: '/images/menu/tiramisu.png',
+			image: '/images/menu/tiramisu.webp',
 		},
 		{
 			id: '7',
@@ -64,7 +64,7 @@
 			description: 'Italian cooked cream dessert, often flavored with vanilla and served with a berry coulis.',
 			price: 8.0,
 			category: 'Dessert',
-			image: '/images/menu/panna-cotta.png',
+			image: '/images/menu/panna-cotta.webp',
 		},
 		{
 			id: '8',
@@ -72,7 +72,7 @@
 			description: 'Strong black coffee brewed by forcing steam or hot water through finely-ground coffee beans.',
 			price: 3.5,
 			category: 'Drink',
-			image: '/images/menu/espresso.png',
+			image: '/images/menu/espresso.webp',
 		},
 		{
 			id: '9',
@@ -80,7 +80,7 @@
 			description: 'Juice freshly squeezed from ripe oranges.',
 			price: 5.0,
 			category: 'Drink',
-			image: '/images/menu/orange-juice.png',
+			image: '/images/menu/orange-juice.webp',
 		},
  ];
 

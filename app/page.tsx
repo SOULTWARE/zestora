@@ -100,7 +100,7 @@ export default function HomePage() {
 						<motion.div className="mt-8 md:mt-0" variants={itemVariants}>
 							<div className="relative rounded-lg overflow-hidden shadow-xl border border-[#2a2a2a] transition-transform duration-500 hover:scale-[1.02]">
 								<Image
-									src="/images/home/philosophy-image.png"
+									src="/images/home/philosophy-image.webp"
 									alt="Zestora's culinary passion"
 									width={600}
 									height={400}
