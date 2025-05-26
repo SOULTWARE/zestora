@@ -12,7 +12,12 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
 
-  // Configure headers
+  // Performance optimizations
+  poweredByHeader: false,
+  compress: true,
+  reactStrictMode: true,
+
+  // Configure headers for security and caching
   headers: async () => {
     return [
       {
@@ -29,6 +34,19 @@ const nextConfig: NextConfig = {
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',
+          },
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },
