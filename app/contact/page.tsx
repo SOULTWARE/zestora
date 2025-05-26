@@ -18,7 +18,7 @@ const contactInfoData = [
 	{
 		icon: <Mail className="h-6 w-6 text-[#FF7E5F]" />,
 		label: 'Email',
-		value: 'info@zestora.com',
+		value: 'contact@soultware.com',
 	},
 	{
 		icon: <Clock className="h-6 w-6 text-[#FF7E5F]" />,

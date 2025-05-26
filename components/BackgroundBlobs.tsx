@@ -9,11 +9,11 @@ const BackgroundBlobs = () => {
 			<motion.div
 				initial={{ scale: 1, rotate: 0 }}
 				animate={{
-					scale: [1, 1.05, 1],
-					rotate: [0, 5, 0],
+					scale: [1, 1.5, 0.9, 1],
+					rotate: [0, 10, -5, 0],
 				}}
 				transition={{
-					duration: 30,
+					duration: 12,
 					repeat: Infinity,
 					ease: 'easeInOut',
 				}}
@@ -32,14 +32,14 @@ const BackgroundBlobs = () => {
 			<motion.div
 				initial={{ scale: 1, x: '50%' }}
 				animate={{
-					scale: [1, 1.1, 1],
-					x: ['50%', '52%', '50%'],
+					scale: [1, 1.3, 0.95, 1],
+					x: ['50%', '53%', '48%', '50%'],
 				}}
 				transition={{
-					duration: 25,
+					duration: 10,
 					repeat: Infinity,
 					ease: 'easeInOut',
-					delay: 1,
+					delay: 0.5,
 				}}
 				className="absolute top-1/3 right-0 w-[900px] h-[900px] blur-3xl opacity-20"
 			>
@@ -56,14 +56,14 @@ const BackgroundBlobs = () => {
 			<motion.div
 				initial={{ scale: 1, y: '30%' }}
 				animate={{
-					scale: [1, 1.08, 1],
-					y: ['30%', '32%', '30%'],
+					scale: [1, 1.5, 0.92, 1],
+					y: ['30%', '33%', '28%', '30%'],
 				}}
 				transition={{
-					duration: 20,
+					duration: 8,
 					repeat: Infinity,
 					ease: 'easeInOut',
-					delay: 2,
+					delay: 1,
 				}}
 				className="absolute -bottom-1/4 left-1/4 w-[1000px] h-[1000px] blur-3xl opacity-25"
 			>

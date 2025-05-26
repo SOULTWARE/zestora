@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const quickLinks = [
 	{ href: '/', label: 'Home' },
@@ -23,7 +23,7 @@ const contactDetails = [
 	},
 	{
 		icon: <Mail className="mr-2 h-5 w-5 text-[#FF7E5F]" />,
-		text: 'info@zestora.com',
+		text: 'contact@soultware.com',
 	},
 	{
 		icon: <Clock className="mr-2 h-5 w-5 text-[#FF7E5F]" />,
@@ -33,18 +33,23 @@ const contactDetails = [
 
 const socialLinks = [
 	{
+		label: 'LinkedIn',
+		href: 'https://www.linkedin.com/company/soultware',
+		icon: <Linkedin className="h-6 w-6" />,
+	},
+	{
 		label: 'Facebook',
-		href: '#',
+		href: 'https://www.facebook.com/soultware',
 		icon: <Facebook className="h-6 w-6" />,
 	},
 	{
 		label: 'Twitter',
-		href: '#',
+		href: 'https://www.twitter.com/soultware',
 		icon: <Twitter className="h-6 w-6" />,
 	},
 	{
 		label: 'Instagram',
-		href: '#',
+		href: 'https://www.instagram.com/soultware',
 		icon: <Instagram className="h-6 w-6" />,
 	},
 ];
@@ -114,10 +119,23 @@ const Footer = () => {
 
 				{/* Copyright */}
 				<div className="border-t border-[#2a2a2a] pt-8 text-center">
-					<p className="text-xs opacity-75">
-						&copy; {new Date().getFullYear()} Zestora. All Rights Reserved. Designed with passion.
+					<p className="text-xs opacity-75 mb-2">
+						&copy; {new Date().getFullYear()} Zestora. All Rights Reserved.
+					</p>
+					<p className="text-sm opacity-60 hover:opacity-90 transition-opacity">
+						Website crafted with ❤️ by{' '}
+						<a
+							href="https://soultware.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-[#FDF6EC] hover:text-[#FF7E5F] transition-colors"
+						>
+							Soultware
+						</a>
 					</p>
 				</div>
+				{/* Soultware Signature */}
+				{/* Built with ❤️ by Soultware */}
 			</div>
 		</footer>
 	);

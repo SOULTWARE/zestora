@@ -8,8 +8,10 @@ import BackgroundBlobs from "@/components/BackgroundBlobs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Zestora - Flavor Meets Finesse",
-  description: "Welcome to Zestora, where culinary passion meets a commitment to excellence.",
+  title: 'Zestora | Where Flavor Meets Finesse',
+  description: 'Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients.',
+  authors: [{ name: 'Soultware' }],
+  metadataBase: new URL('https://soultware.com'),
 };
 
 export default function RootLayout({
@@ -19,6 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <meta name="author" content="Soultware" />
+      </head>
       <body className={`${inter.className} relative min-h-screen bg-[#1a1a1a] text-[#FDF6EC]`}>
         <BackgroundBlobs />
         <Navbar />
