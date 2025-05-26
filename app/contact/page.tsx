@@ -127,12 +127,11 @@ export default function ContactPage() {
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086419385898!2d-122.41941548468159!3d37.77492957975854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808c1c121249%3A0xb1b7081c7a9ff1dc!2sSan%20Francisco%20City%20Hall!5e0!3m2!1sen!2sus!4v1620838000000!5m2!1sen!2sus"
                   width="100%"
                   height="350"
-                  style={{ border: 0 }}
+                  className="border-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   allowFullScreen={true}
                   loading="lazy"
                   title="Restaurant Location"
                   referrerPolicy="no-referrer-when-downgrade"
-                  className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                 ></iframe>
 							</motion.div>
 						</div>

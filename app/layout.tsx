@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackgroundBlobs from "@/components/BackgroundBlobs";
 import { restaurantJsonLd } from "@/lib/structured-data";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://zestora.soultware.com'),
   title: 'Zestora | Where Flavor Meets Finesse',
   description: 'Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients.',
+  manifest: '/manifest.json',
   authors: [{ name: 'Soultware' }],
   openGraph: {
     type: 'website',
@@ -72,6 +74,26 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
+        />
+        <Script
+          id="register-sw"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').then(
+                    function(registration) {
+                      console.log('ServiceWorker registration successful');
+                    },
+                    function(err) {
+                      console.log('ServiceWorker registration failed: ', err);
+                    }
+                  );
+                });
+              }
+            `,
+          }}
         />
       </head>
       <body className={`${inter.className} relative min-h-screen bg-[#1a1a1a] text-[#FDF6EC]`}>
