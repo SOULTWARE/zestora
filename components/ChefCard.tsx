@@ -12,9 +12,9 @@ const ChefCard: React.FC<ChefCardProps> = ({ chef }) => {
         <Image
           src={chef.avatar}
           alt={chef.name}
-          layout="fill"
-          objectFit="cover"
-          className="transition-transform duration-500 group-hover:scale-110"
+          fill
+          sizes="(max-width: 768px) 128px, 160px"
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
       </div>
       <h3 className="mb-2 text-xl font-semibold text-[#FFF8F0] group-hover:text-[#FF7E5F] transition-colors md:text-2xl">
