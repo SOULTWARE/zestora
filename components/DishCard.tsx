@@ -8,7 +8,7 @@ interface DishCardProps {
 const DishCard: React.FC<DishCardProps> = ({ dish }) => {
 	return (
 		<div className="group overflow-hidden rounded-lg bg-[#181818] border border-[#2a2a2a] shadow-lg transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10 hover:border-[#FF7E5F]/20">
-			<div className="relative w-full aspect-[1.33] overflow-hidden">
+			<div className="relative w-full aspect-[1] overflow-hidden">
 				<Image
 					src={dish.image}
 					alt={dish.name}

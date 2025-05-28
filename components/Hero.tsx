@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <div className="relative h-[calc(100vh-4rem)] w-full overflow-hidden">
-      <div className="relative h-full w-full">
+      <div className="relative aspect-[1.5] h-full w-full">
         <Image
           src="/images/home/hero-background.webp"
           alt="Zestora Restaurant Hero"
