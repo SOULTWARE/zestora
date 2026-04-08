@@ -2,7 +2,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Globe, Sparkles, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { siteConfig } from '@/lib/seo';
 
 const quickLinks = [
 	{ href: '/', label: 'Home' },
@@ -15,19 +16,19 @@ const quickLinks = [
 const contactDetails = [
 	{
 		icon: <MapPin className="mr-2 h-5 w-5 text-[#FF7E5F]" />,
-		text: '123 Culinary Avenue, Flavor Town, FT 54321, USA',
-	},
-	{
-		icon: <Phone className="mr-2 h-5 w-5 text-[#FF7E5F]" />,
-		text: '(123) 456-7890',
+		text: siteConfig.company.location,
 	},
 	{
 		icon: <Mail className="mr-2 h-5 w-5 text-[#FF7E5F]" />,
-		text: 'contact@soultware.com',
+		text: siteConfig.company.email,
 	},
 	{
-		icon: <Clock className="mr-2 h-5 w-5 text-[#FF7E5F]" />,
-		text: 'Mon - Fri: 11:00 AM - 10:00 PM | Sat - Sun: 09:00 AM - 11:00 PM',
+		icon: <Globe className="mr-2 h-5 w-5 text-[#FF7E5F]" />,
+		text: 'Serving Texas, the United States, and Canada',
+	},
+	{
+		icon: <Sparkles className="mr-2 h-5 w-5 text-[#FF7E5F]" />,
+		text: 'Live portfolio demo crafted to showcase SOULTWARE LLC',
 	},
 ];
 
@@ -63,7 +64,7 @@ const Footer = () => {
 					<div className="md:col-span-2 lg:col-span-1">
 						<h3 className="text-xl font-semibold mb-4 text-[#FFF8F0]">Zestora</h3>
 						<p className="text-sm leading-relaxed opacity-90">
-							Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients. Join us for an unforgettable culinary journey.
+							Zestora is a premium restaurant website demo created by SOULTWARE LLC. It exists to showcase polished product design, technical SEO, and high-performance Next.js delivery.
 						</p>
 					</div>
 
@@ -122,20 +123,21 @@ const Footer = () => {
 					<p className="text-xs opacity-75 mb-2">
 						&copy; {new Date().getFullYear()} Zestora. All Rights Reserved.
 					</p>
-					<p className="text-sm opacity-60 hover:opacity-90 transition-opacity">
-						Website crafted with ❤️ by{' '}
+					<p className="mx-auto mb-3 max-w-2xl text-sm opacity-75">
+						Businesses looking for a website like this can work directly with SOULTWARE LLC through the main company site.
+					</p>
+					<p className="text-sm opacity-60 transition-opacity hover:opacity-90">
+						Website crafted by{' '}
 						<a
-							href="https://soultware.com"
+							href={siteConfig.company.homeUrl}
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-[#FDF6EC] hover:text-[#FF7E5F] transition-colors"
 						>
-							Soultware
+							SOULTWARE LLC
 						</a>
 					</p>
 				</div>
-				{/* Soultware Signature */}
-				{/* Built with ❤️ by Soultware */}
 			</div>
 		</footer>
 	);

@@ -4,7 +4,13 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackgroundBlobs from "@/components/BackgroundBlobs";
-import { restaurantJsonLd } from "@/lib/structured-data";
+import SoultwareBadge from "@/components/SoultwareBadge";
+import { buildMetadata, siteConfig } from "@/lib/seo";
+import {
+  demoProjectJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from "@/lib/structured-data";
 import Script from "next/script";
 
 const inter = Inter({
@@ -15,33 +21,26 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://zestora.soultware.com'),
-  title: 'Zestora | Where Flavor Meets Finesse',
-  description: 'Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients.',
-  manifest: '/manifest.json',
-  authors: [{ name: 'Soultware' }],
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://zestora.soultware.com',
-    siteName: 'Zestora Restaurant',
-    title: 'Zestora | Where Flavor Meets Finesse',
-    description: 'Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients.',
-    images: [
-      {
-        url: '/images/Zestora.png',
-        width: 1200,
-        height: 630,
-        alt: 'Zestora Restaurant',
-      },
-    ],
+  metadataBase: new URL(siteConfig.baseUrl),
+  ...buildMetadata({
+    title: siteConfig.siteTitle,
+    description: siteConfig.description,
+    path: "/",
+  }),
+  title: {
+    default: siteConfig.siteTitle,
+    template: "%s | SOULTWARE LLC",
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zestora | Where Flavor Meets Finesse',
-    description: 'Experience the art of fine dining at Zestora, where every dish is a masterpiece crafted with passion and the freshest ingredients.',
-    images: ['/images/Zestora.png'],
-    creator: '@soultware',
+  manifest: "/manifest.json",
+  applicationName: siteConfig.siteName,
+  authors: [{ name: siteConfig.company.name, url: siteConfig.company.url }],
+  creator: siteConfig.company.name,
+  publisher: siteConfig.company.name,
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
   robots: {
     index: true,
@@ -49,9 +48,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -65,6 +64,9 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <head>
         <meta name="author" content="Soultware" />
+        <meta name="creator" content={siteConfig.company.name} />
+        <meta name="publisher" content={siteConfig.company.name} />
+        <meta name="apple-mobile-web-app-title" content={siteConfig.siteName} />
         <link
           rel="preload"
           href="/images/home/hero-background.webp"
@@ -73,7 +75,13 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              organizationJsonLd,
+              websiteJsonLd,
+              demoProjectJsonLd,
+            ]),
+          }}
         />
         <Script
           id="register-sw"
@@ -103,6 +111,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <SoultwareBadge />
       </body>
     </html>
   );

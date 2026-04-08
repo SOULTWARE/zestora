@@ -1,9 +1,7 @@
 import { MetadataRoute } from 'next';
+import { siteConfig } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://zestora.soultware.com';
-
-  // Define all static routes
   const routes = [
     '',
     '/about',
@@ -11,10 +9,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/reservation',
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${siteConfig.baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: route === '' ? 1 : 0.8,
+    changeFrequency: route === '' ? 'weekly' as const : 'monthly' as const,
+    priority: route === '' ? 1 : 0.7,
   }));
 
   return routes;
