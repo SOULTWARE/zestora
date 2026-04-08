@@ -2,15 +2,16 @@
 
 import { Testimonial } from '@/lib/testimonial-data';
 import { Star } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
+import { easeOut } from '@/lib/motion';
 
 interface TestimonialCardProps {
 	testimonial: Testimonial;
 }
 
-const cardVariants = {
+const cardVariants: Variants = {
 	hidden: { opacity: 0, y: 20, scale: 0.95 },
-	visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+	visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: easeOut } },
 };
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {

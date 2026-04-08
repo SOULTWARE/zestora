@@ -1,10 +1,11 @@
 'use client';
 
 import ContactForm from '@/components/ContactForm';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Globe, Mail, MapPin, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/seo';
+import { easeOut } from '@/lib/motion';
 
 const contactInfoData = [
   {
@@ -29,21 +30,21 @@ const contactInfoData = [
   },
 ];
 
-const pageTitleVariants = {
+const pageTitleVariants: Variants = {
   hidden: { opacity: 0, y: -30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: easeOut } },
 };
 
-const columnVariants = {
+const columnVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: easeOut },
   },
 };
 
-const contactInfoListVariants = {
+const contactInfoListVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -54,18 +55,18 @@ const contactInfoListVariants = {
   },
 };
 
-const contactInfoItemVariants = {
+const contactInfoItemVariants: Variants = {
   hidden: { opacity: 0, x: -30 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.5, ease: 'easeOut' },
+    transition: { duration: 0.5, ease: easeOut },
   },
 };
 
-const mapVariants = {
+const mapVariants: Variants = {
   hidden: { opacity: 0, scale: 0.95 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.4, ease: 'easeOut' } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.4, ease: easeOut } },
 };
 
 export default function ContactPageClient() {
@@ -97,7 +98,7 @@ export default function ContactPageClient() {
                 className="mb-6 text-2xl font-semibold text-[#FFF8F0]"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
+                transition={{ delay: 0.1, ease: easeOut }}
               >
                 Contact Information
               </motion.h2>
@@ -149,7 +150,7 @@ export default function ContactPageClient() {
                 className="mb-6 text-2xl font-semibold text-[#FFF8F0]"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
+                transition={{ delay: 0.1, ease: easeOut }}
               >
                 Send Us a Message
               </motion.h2>

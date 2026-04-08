@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { easeInOut } from '@/lib/motion';
 
 const BackgroundBlobs = () => {
 	return (
@@ -15,7 +16,7 @@ const BackgroundBlobs = () => {
 				transition={{
 					duration: 12,
 					repeat: Infinity,
-					ease: 'easeInOut',
+					ease: easeInOut,
 				}}
 				className="absolute -top-1/4 -left-1/4 w-[800px] h-[800px] blur-2xl opacity-30"
 			>
@@ -38,7 +39,7 @@ const BackgroundBlobs = () => {
 				transition={{
 					duration: 10,
 					repeat: Infinity,
-					ease: 'easeInOut',
+					ease: easeInOut,
 					delay: 0.5,
 				}}
 				className="absolute top-1/3 right-0 w-[900px] h-[900px] blur-3xl opacity-20"
@@ -62,7 +63,7 @@ const BackgroundBlobs = () => {
 				transition={{
 					duration: 8,
 					repeat: Infinity,
-					ease: 'easeInOut',
+					ease: easeInOut,
 					delay: 1,
 				}}
 				className="absolute -bottom-1/4 left-1/4 w-[1000px] h-[1000px] blur-3xl opacity-25"

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { siteConfig } from '@/lib/seo';
+import { easeOut } from '@/lib/motion';
 
 const Hero = () => {
   return (
@@ -22,7 +23,7 @@ const Hero = () => {
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 0.8, ease: easeOut }}
           className="mb-4 text-5xl font-bold md:text-7xl"
         >
           Welcome to Zestora
@@ -30,7 +31,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15, ease: 'easeOut' }}
+          transition={{ duration: 0.6, delay: 0.15, ease: easeOut }}
           className="mb-3 rounded-full border border-white/15 bg-black/25 px-4 py-2 text-xs uppercase tracking-[0.24em] text-[#FFD8CD] md:text-sm"
         >
           Demo Website by {siteConfig.company.name}
@@ -38,7 +39,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
+          transition={{ duration: 0.8, delay: 0.3, ease: easeOut }}
           className="mb-8 max-w-2xl px-4 text-lg text-gray-200 md:text-xl"
         >
           Where every dish tells a story of passion, tradition, and innovation
@@ -46,7 +47,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: 'easeOut' }}
+          transition={{ duration: 0.8, delay: 0.6, ease: easeOut }}
           className="flex flex-col gap-4 sm:flex-row"
         >
           <Link

@@ -8,24 +8,25 @@ import { mockDishes } from '@/lib/dish-data';
 import { mockTestimonials } from '@/lib/testimonial-data';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
+import { easeOut } from '@/lib/motion';
 
-const sectionVariants = (delay = 0) => ({
+const sectionVariants = (delay = 0): Variants => ({
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: 'easeOut', delay },
+    transition: { duration: 0.7, ease: easeOut, delay },
   },
 });
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: easeOut } },
 };
 
-const listVariants = (stagger = 0.15, delayChildren = 0.2) => ({
+const listVariants = (stagger = 0.15, delayChildren = 0.2): Variants => ({
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
