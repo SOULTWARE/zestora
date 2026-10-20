@@ -70,7 +70,7 @@ export const demoShowcaseWebPageJsonLd = {
   "@type": "WebPage",
   "@id": `${siteConfig.baseUrl}/#webpage`,
   url: siteConfig.baseUrl,
-  name: "Restaurant Website Demo Built by SOULTWARE LLC ",
+  name: "Restaurant Website Demo Built by SOULTWARE LLC",
   description:
     "Portfolio demo by SOULTWARE LLC showing restaurant website design, technical SEO, structured data, and AI-friendly publishing patterns.",
   isPartOf: {
